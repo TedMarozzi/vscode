@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "type": "shell",
+        "label": "make",
+        "command": "make",
+        "problemMatcher": ["$gcc"],
+        "group": "build"
+      },
+      {
+        "type": "shell",
+        "label": "run",
+        "dependsOn":"make",
+        "command": "./a2 p1a < ${workspaceFolder}/tests/p1a-in-1.txt",
+        "problemMatcher": ["$gcc"],
+        "group": "build"
+        
+      },
+      {
+        "type": "shell",
+        "label": "clean",
+        "command": "make clean",
+        "problemMatcher": ["$gcc"],
+        "group": "build"
+      }
+
+
+    ]
+  }
